@@ -1,0 +1,8 @@
+L=['a','b','c']
+def val (a,L):
+	if a in L:
+		return val
+	else:
+		print('Digite uma opção válida')
+while True:
+	a=input(f'Digite uma das opções validas a seguir: {val(a,L)}')

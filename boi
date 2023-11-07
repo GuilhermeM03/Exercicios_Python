@@ -1,0 +1,18 @@
+i=0
+f=6
+p1=0
+p2=100
+n1=0
+n2=0
+while i<=f:
+	ident=float(input('Digite a identificação do boi: '))
+	peso=float(input('Digite o peso do boi: '))
+	i=i+1
+	if peso>p1:
+		p1=peso
+		n1=ident
+	if peso<p2:
+		p2=peso
+		n2=ident
+print('O maior boi é o de identificação',n1,'pesando',p1,'quilos')
+print('O menor boi é o de identificação',n2,'pesando',p2,'quilos')

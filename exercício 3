@@ -1,0 +1,8 @@
+p = 0.12
+b = 1.5
+v1 = int ( input ("Digite o número de pãos vendidos "))
+v2 = int ( input ("Digite o número de broas vendidas "))
+t = (p * v1) + (b * v2)
+g = ((t * 10) / 100)
+print (" O lucro total de hoje foi" , t , "reais ")
+print ("deve quardar " , g , "teais do lucro")

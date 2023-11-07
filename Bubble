@@ -1,0 +1,35 @@
+#1
+'''T=[-10, -8, 0, 1, 2, 5, -2, -4]
+n=len(T)
+def bubbleSort(T ,n):
+	troca=True
+	while troca:
+		troca= False
+		for i in range(n-1):
+			if T[i] > T[i+1]:
+				chave = T[i]
+				T[i] = T[i+1]
+				T[i+1] = chave
+				troca= True
+	return T
+print(bubbleSort(T ,n))'''
+#2
+def bubbleSort(lista ,tam):
+	troca=True
+	while troca:
+		troca= False
+		for i in range(tam-1):
+			if lista[i] > lista[i+1]:
+				chave = lista[i]
+				lista[i] = lista[i+1]
+				lista[i+1] = chave
+				troca= True
+	return lista
+lista=[]
+for i in range(0, 10):
+	n=int(input('Digite um número: '))
+	lista.append(n)
+tam=len(lista)
+print(lista)
+
+print(bubbleSort(lista ,tam))

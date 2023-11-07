@@ -1,0 +1,4 @@
+c = float ( input (" Digite o comprimento do terreno "))
+l = float ( input (" Digite a largura do terreno"))
+a = c * l
+print (" A área do terre é" , a , " metros quadrados")

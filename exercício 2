@@ -1,0 +1,4 @@
+p = 4
+c = int ( input ("Digite quantos cavalos tem na hasta "))
+t = p * c
+print (" Serão nescessarias " , t , " ferraduras")

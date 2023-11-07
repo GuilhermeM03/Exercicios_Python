@@ -1,0 +1,61 @@
+emissão1={'Cimento': [1, 50, 48.44],
+					'Cal': [1, 20, 15.71],
+					'Aço': [1, 1, 1.45],
+					'Ferro': [1, 1, 1.45],
+					'Tijolo': [1, 1, 0.95],
+					'Telha': [1, 1, 0.95],
+					'Areia': [1, 1, 22.62],
+					'Brita': [1, 1, 22.62]
+}
+emissão2={'cimento': [1, 50, 48.44],
+					'cal': [1, 20, 15.71],
+					'aço': [1, 1, 1.45],
+					'ferro': [1, 1, 1.45],
+					'tijolo': [1, 1, 0.95],
+					'telha': [1, 1, 0.95],
+					'areia': [1, 1, 22.62],
+					'brita': [1, 1, 22.62]
+}
+print('Média de CO2 em Kg produzido por cada material: \n')
+for chave, dados in emissão1.items():
+	print('Material: ', chave)
+	print('Unidade ', dados[0])
+	print('Quantidade: ', dados[1])
+	print('Emitido: ', dados[2])
+	print('\n')
+total=0
+utilizado=[ ]
+while True:
+   material=input('Digite os materiais utilizados na construção: \n')
+   if material.upper()=="AREIA" or material.upper()=="BRITA":
+      quantidade=int(input('Digite a quantidade (m^3) utilizado na construção: \n'))
+      utilizado.append([material, quantidade])
+   else:
+      quantidade=int(input('Digite a quantidade (un.) utilizado na construção: \n'))
+      utilizado.append([material, quantidade])
+   sair=(input('Digite 0 se deseja encerrar a listagem dos materiais ou digite 1 para adicionar o proximo material: \n'))
+   if sair=='0':
+      break
+print('\n')
+if material in emissão1:
+	for operação in utilizado:
+		material, quantidade = operação
+		emissão=emissão1[material][2]
+		emitido= quantidade*emissão
+		print(f" Material: {material:12s}\n Emissão: {emissão:6.2f}\n Total Emitido: {emitido:6.2f}\n")
+		total+=emitido
+elif material in emissão2:
+	for operação in utilizado:
+		material, metro = operação
+		emissão=emissão2[material][2]
+		emitido= quantidade*emissão
+		print(f" Material: {material:12s}\n Emissão: {emissão:6.2f}Kg \n Total Emitido:  {emitido:6.2f}Kg\n")
+		total+=emitido
+else:
+	print('Não foi digitado um material válido\n')
+print(f'O total emitido em Kg : {total:6.2f} CO2\n')
+toneladas=total/1000
+print(f'A Tonelada de CO2 emitida foi:{toneladas:6.2f}\n ')
+arvore=toneladas*7
+cc=toneladas*66.44
+print(f'Para a reparação na compra dos materiais é nescessario:\nComprar{toneladas:6.0f} de crédito de carbono (R$: 66.44) no valor total de R$:{cc:6.2f}\nou\nPlantar{arvore:6.0f} árvores e mantelas por 20 anos')

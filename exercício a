@@ -1,0 +1,18 @@
+rp1='c' 
+rp2='a'
+rp3='b'
+rp1=input('Digite a alternativa da questão 1: ')
+rp2=input('Digite a alternativa da questão 2: ')
+rp3=input('Digite a alternativa da questão 3: ')
+if rp1=='c' or rp1=='C':
+	print('Resposta da questão 1 certa')
+else:
+	print('Resposta da Questão 1 errada')
+	if rp2=='a' or rp2=='A':
+		print('Resposta da questão 2 certa')
+	else:
+		print('Resposta da questão 2 errada')
+	if rp3=='b' or rp3=='B':
+			print('Resposta da questão 3 certa')
+	else:
+			print('Resposta da questão 3 errada')

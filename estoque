@@ -1,0 +1,32 @@
+estoque={'cerveja':[300,3.20],
+					'whisky':[50,50.99],
+					'agua':[500,2.00],
+					'ice':[300,7.90],
+					'redbull':[300,10.90]
+					}
+print(estoque)
+total=0
+venda=[ ]
+while True:
+	produto=input('Didite o produto: ')
+	quantidade=int(input('Digite a quantidade: '))
+	venda.append([produto,quantidade])
+	sair=(input('Digite 0 para sair ou outra coisa: '))
+	if sair=='0':
+		break
+for operacao in venda:
+	produto, quantidade = operacao
+	preço=estoque[produto][1]
+	custo=quantidade*preço
+	print(f"{produto:12s} : {quantidade:3d} x {preço:6.2f} = {custo:6.2f}\n")
+	estoque[produto][0]-=quantidade
+	total+=custo
+	
+print(f'O Custo total é: {total:6.2f}\n')
+
+print('Estoque: \n')
+
+for chave, dados in estoque.items():
+	print('Descrição: ', chave)
+	print('Quantidade: ', dados[0])
+	print(f'Preço:  {dados[1]: 6.2f} \n')

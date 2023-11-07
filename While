@@ -1,0 +1,21 @@
+#1)
+'''cont=0
+resp='s'
+while resp=='s' or resp=='S':
+	n1=int(input('Digite um valor: '))
+	if n1>=30:
+		cont+=1
+	resp=input('Deseja continuar? [S/N]: ')
+print('Foram digitados %d valores maiores que 30' % cont)'''
+#2)
+a=200
+b=150
+n=0
+while a>b:
+	a=a+(a*0.015)
+	b=b+(b*0.030)
+	n+=1
+print('População total do país A:',a)
+print('População total do país B:',b)
+print('O país B demorou',n,' anos para ultrapassar o país A')
+print('O país A foi superado pelo país B por:',b-a)

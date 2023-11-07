@@ -1,0 +1,16 @@
+print (len ("Vai tomar no cu Corinthians"))
+
+s = "ABC"
+print (s + "D" + "X" * 4)
+
+idade = 54
+print (("João tem %d anos" )% idade)
+print (("João tem %d anos" )% 54)
+
+numero = 89 
+print (("(%d)") % numero)
+print("%03d" % numero)
+n = 44
+print ("%110d" %n)
+altura = 1.80
+print("João tem 0%2.3f de altura" % altura)

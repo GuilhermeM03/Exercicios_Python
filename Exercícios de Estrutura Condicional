@@ -1,0 +1,41 @@
+# 1)
+n1=int(input('Digite um número: '))
+if n1>=0:
+	print('Seu número é positivo')
+else:
+	print('Seu número é negativo')
+# 2)
+c=float(input('Digite o número da sua conta: '))
+n1=float(input('Digite o saldo: '))
+n2=float(input('Digite seu débito: '))
+n3=float(input('Digite seu crédito: '))
+t=n1-(n2+n3)
+if t>=0:
+	print(f'Saldo Positivo. R$ {t}')
+else:
+	print(f'Se Fudeo Otário. R$ {t}')
+# 3)
+m=int(input('Digite o número de maçãs compradas: '))
+if m<12:
+	c=m*1.30
+	print('O custo total de maçã',m,' da sua compra foi: R$ %2.2f' % c)
+else:
+	c=m*1.0
+	print('O custo total de maçãs',m,'da sua compra foi: R$ %2.2f' % c)
+# 4)
+p1=float(input('Digite a sua nota na avaliação 1: '))
+p2=float(input('Digite a sua nota na avaliação 2: '))
+m=(p1+p2)/2
+if m>=6:
+	print('Voce foi Aprovado com a média: %1.1f ' % m)
+else:
+	print(f'Voce foi Reprovado com a média: %1.1f ' % m)
+# 5)
+n1=int(input('Digite um número: '))
+n2=int(input('Digite outro número: '))
+if n1>n2:
+	print('O maior numero é: ',n1,)
+elif n1<n2:
+	print('O maior número é: ',n2,)
+else:
+	print('Os valores são iguais')
